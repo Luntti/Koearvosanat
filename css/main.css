@@ -1,0 +1,58 @@
+body,html{
+	padding:0;
+	margin:0;
+}
+body{
+	background-color:#019EB1;
+	color:#FFF;
+	font-size:20px;
+	font-weight:300;
+	text-align:center;
+	cursor:default;
+}
+a{
+	color:inherit;
+}
+b{
+	font-weight:700;
+}
+h1{
+	font-family: 'Lobster', cursive;
+	font-size:300%;
+	text-shadow:4px 4px 0 rgba(0,0,0,0.25);
+	text-align:center;
+}
+h2{
+	font-weight:300;
+}
+#keskiosa{
+	text-align:left;
+}
+#maxValinta,#asteikonValinta,#rajaValinta{
+	padding:12px;
+	text-align:center;
+}
+#maxValinta:hover,#asteikonValinta:hover,#rajaValinta:hover/*,h1:hover*/{
+	background-color:rgba(255,255,255,0.1);
+	cursor:pointer;
+}
+table{
+	text-align:left;
+	font:inherit;
+	margin:0 auto;
+	width:100%;
+}
+.hyl{
+	color:#FF8080;
+}
+.odd{
+	background-color:rgba(255,255,255,0.1);
+}
+hr{
+	border:none;
+	height:1px;
+	background-color:#FFF;
+}
+#palaute tr:hover{
+	background-color:rgba(255,255,255,0.2);
+}
