@@ -18,6 +18,16 @@
 		<script src="js/main.js"></script>
 	</head>
 	<body>
+		<div id="modalContainer" class="hidden">
+			<div class="modal" id="asteikkoModal" style="text-align:left">
+				<h2>Arvosteluasteikko</h2>
+				<p>Valitse arvioinnissa käytettävä arvosana-asteikko</p>
+				<p id="asteikot"></p>
+				<div class="buttonDock" style="text-align:right">
+					<a href="#" id="vahvistaAsteikko" class="but colored orange">Valitse</a>
+				</div>
+			</div>
+		</div>
 		<div class="fixedWidth" id="keskiosa">
 			<br /><br /><h1>Koe&shy;arvo&shy;sanat</h1><br /><br />
 			

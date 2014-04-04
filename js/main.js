@@ -89,11 +89,21 @@ function laske(){
 }
 
 $(function(){
-	$("h1").keyup(function(){
-		laske();
+	// Luo napit asteikon valinta modaaliin
+	$.each(asteikot,function(k,v){
+		$("#asteikot").append("<label><input type=\"radio\" name=\"asteikko\" id=\"ast" + k + "\" value=\"" + k + "\" /> " + v[0] + "</label><br />");
 	});
 	
+	$("#ast" + n).prop("checked",true);
+
+	// Avaa asteikon valinta modaali
 	$("#asteikonValinta").click(function(){
+		petjaUI.modals.show("asteikko");
+	});
+	
+	// Ota käyttöön valittu asteikko
+	$("#vahvistaAsteikko").click(function(){
+		petjaUI.modals.close('asteikko')
 		if(osallistujat > 0 || pisteet > 0){
 			if(!confirm("Jos vaihdat arvosteluasteikkoa, antamasi arvosanat poistetaan.\n\nJatketaanko?")){
 				return false;
@@ -108,13 +118,12 @@ $(function(){
 			arvosanaData[k] = 0;
 		});
 		
-		n++;
-		if(n >= asteikot.length){
-			n=0
-		}
+		n = $("input[name=asteikko]:checked").val();
+		
 		$("#asteikonValinta span").html(asteikot[n][0]);
 		laske();
 	});
+	
 	$("#maxValinta").click(function(){
 		var val = prompt("Max. pisteet",maks);
 		if(val !== null){
