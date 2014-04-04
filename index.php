@@ -15,7 +15,6 @@
 		
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script src="http://rawgithub.com/Petja/PetjaUI/master/main.js"></script>
-		<script src="js/convert.js"></script>
 		<script src="js/main.js"></script>
 	</head>
 	<body>
@@ -63,8 +62,9 @@
 			<div class="grid-50 mobile-grid-100">
 				<small><b>Koearvosanat</b> laskee kokeidesi arvosanat helposti. Ohjelma on <a href="http://choosealicense.com/licenses/gpl-v2/">GPL-lisensoitu</a> vapaan lähdekoodin ohjelma.</small>
 				<br /><br />
-				<a href="#"><b class="fa fa-github"></b>&emsp;Github</a> &emsp;&emsp;
-				<a href="#"><b class="fa fa-code-fork"></b>&emsp;Forkkaa</a>
+				<a href="https://github.com/Luntti/Koearvosanat"><b class="fa fa-github"></b>&emsp;Github</a> &emsp;&emsp;
+				<a href="https://github.com/Luntti/Koearvosanat/fork"><b class="fa fa-code-fork"></b>&emsp;Forkkaa</a> &emsp;&emsp;
+				<a href="https://github.com/Luntti/Koearvosanat/graphs/contributors"><b class="fa fa-users"></b>&emsp;Tekijät</a>
 				<br /><br />
 			</div>
 		</div>
