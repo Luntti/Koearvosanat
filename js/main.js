@@ -103,7 +103,7 @@ $(function(){
 	
 	// Ota käyttöön valittu asteikko
 	$("#vahvistaAsteikko").click(function(){
-		petjaUI.modals.close('asteikko')
+		petjaUI.modals.close("asteikko");
 		if(osallistujat > 0 || pisteet > 0){
 			if(!confirm("Jos vaihdat arvosteluasteikkoa, antamasi arvosanat poistetaan.\n\nJatketaanko?")){
 				return false;
@@ -124,17 +124,37 @@ $(function(){
 		laske();
 	});
 	
+	// Avaa rajan valinta modaali
+	$("#rajaValinta").click(function(){
+		petjaUI.modals.show("raja");
+		$("#rajaPst").attr("max",maks);
+	});
+	
+	// Ota käyttöön valittu raja
+	$("#vahvistaRaja").click(function(){
+		var v = parseFloat($("#rajaPro").val()) / 100;
+		if(v){
+			vaatimus = v;
+			petjaUI.modals.close("raja");
+			laske();
+		}
+	});
+	
+	// Suhteuta tekstikenttien arvot
+	$("#rajaPro").change(function(){
+		var rajaPro = parseFloat($("#rajaPro").val());
+		$("#rajaPst").val(Math.round(maks / 100 * rajaPro));
+	});
+	
+	$("#rajaPst").change(function(){
+		var rajaPst = parseFloat($("#rajaPst").val());
+		$("#rajaPro").val(Math.round(rajaPst / maks * 100));
+	});
+	
 	$("#maxValinta").click(function(){
 		var val = prompt("Max. pisteet",maks);
 		if(val !== null){
 			maks = parseFloat(val);
-			laske();
-		}
-	});
-	$("#rajaValinta").click(function(){
-		var val = prompt("Läpäisyraja",vaatimus*100);
-		if(val !== null){
-			vaatimus = parseFloat(val) / 100;
 			laske();
 		}
 	});

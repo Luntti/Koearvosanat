@@ -24,10 +24,24 @@
 				<p>Valitse arvioinnissa käytettävä arvosana-asteikko</p>
 				<p id="asteikot"></p>
 				<div class="buttonDock" style="text-align:right">
-					<a href="#" id="vahvistaAsteikko" class="but colored orange">Valitse</a>
+					<a href="javascript:void(0)" id="vahvistaAsteikko" class="but colored orange">Valitse</a>
+				</div>
+			</div>
+			<div class="modal" id="rajaModal" style="text-align:left">
+				<h2>Läpäisyraja</h2>
+				<p>Määritä kokeen vähimmäispistemäärä</p>
+				<br />
+				<p style="text-align:center;">
+					<input type="number" value="0" size="3" min="0" max="100" id="rajaPro" /> % &emsp; &asymp; &emsp;
+					<input type="number" value="0" size="3" min="0" max="250" id="rajaPst" /> pst.
+				</p>
+				<br />
+				<div class="buttonDock" style="text-align:right">
+					<a href="javascript:void(0)" id="vahvistaRaja" class="but colored orange">Valitse</a>
 				</div>
 			</div>
 		</div>
+		
 		<div class="fixedWidth" id="keskiosa">
 			<br /><br /><h1>Koe&shy;arvo&shy;sanat</h1><br /><br />
 			
